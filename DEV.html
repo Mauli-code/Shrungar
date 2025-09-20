@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spaceverse</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<style>
+       
+    body {
+        background-color: black;
+        color: rgb(72, 213, 229);
+        font-family: Arial, sans-serif;
+        text-align: left;
+        padding: 50px;
+    }
+    a {
+        text-decoration: none;
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+    h1 {
+        text-align: center;
+        color: rgb(17, 175, 227);
+    }
+    h2 {
+        color: rgb(0, 191, 255);
+    }
+    ul {
+        list-style-type: square;
+    }
+    p {        
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    form {
+        border: 3px solid #f1f1f1;
+        background-color: white;
+        color: black;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 400px;
+        margin: 0 auto;
+
+    }
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;  
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+    button {
+        background-color: #04AA6D;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 5px;
+    }
+    button:hover {
+        opacity: 0.8;
+    }
+    .imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+    }
+    .avatar {
+        width: 40%;
+        border-radius: 50%;
+    }
+    .column {     
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+    }
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+    }
+    .avatar {
+        width: 40%;
+        border-radius: 50%;
+    }
+    .slidesho  w-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+    }
+    .mySlides {
+        display: none;
+    }
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+
+    .prev {
+        left: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }   
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+    .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+    .dot {
+        cursor: pointer;    
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;      
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+    .fade {  
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+
+    .zoom {
+        padding: 50px;
+        transition: transform .2s;
+        width: 400px;
+        height: 400px;
+        margin: 0 auto;
+    }
+    .zoom:hover {
+        transform: scale(1.1);
+    }
+
+        .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+    width: 90px;
+    zoom: 1.2;
+    margin: 0 auto;
+}
+img {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  height: auto;
+}
+
+
+.container {
+  padding: 2px 16px;
+  text-align: center;
+  color: black;
+  background-color: rgb(62, 222, 234);
+}  
+
+@-webkit-keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+    
+    @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+
+    .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;     
+    border-radius: 5px;
+        width: 90px;
+        zoom: 1.2;
+        margin: 0 auto;}
+img {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  height: auto;
+}
+
+
+.container {
+  padding: 2px 16px;
+  text-align: center;
+  color: black;
+  background-color: rgb(62, 222, 234);
+}  
+
+@-webkit-keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+
+    @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+
+    }
+    .icon-bar {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #555;
+  border-radius: 10px;
+  z-index: 1000;
+}  
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+.icon-bar a:hover {
+  background-color: #000;
+}
+.icon-bar a.active {
+  background-color: #04AA6D;
+}      
+.container { 
+      display: inline-block;
+  cursor: pointer;
+
+    text-align: center;
+    color: black;
+    background-color: rgb(62, 222, 234);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 auto;
+}
+.caption {
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 auto; 
+    width: 50%;
+}
+.slider-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1s ease-in-out;
+}
+
+.navigation {
+    margin-top: 20px;
+    color: rgb(23, 232, 251);
+}
+
+
+    
+</style>
+
+
+
+<body>
+
+
+
+    <h1 title="one">spaceverse</h1>
+    <background-img>
+        <img src="https://www.krqe.com/wp-content/uploads/sites/12/2022/12/AdobeStock_81556974.jpeg?w=2560&h=1440&crop=1" alt="background" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.5;">
+    </background-img>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxcBKYy48aG9I5uh-IhnGN_gvmhGelP6T1GQ&s" 
+    alt="spaceverse" style="margin-top: 20px; width: 300px; height: auto; border-radius: 10px;">
+   
+    <p>Welcome to the spaceverse development page!</p>
+    <p>Here you can find information about the latest updates and features.</p>
+    <p>Stay tuned for more exciting developments!</p>
+    <br>
+
+    <form action="action_page.php" method="post">
+    <h2>Login to Your Account</h2>
+
+  <div class="imgcontainer">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOYj24EE4zIy_cyPME3JQoM5kk9vGsb_x7rw&s" alt="Avatar" class="avatar">
+  </div>
+
+      <form action="/login" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Login</button>
+    </form>
+
+
+    <h2>Current Features:</h2>
+
+    <ul>
+        <li>Explore the universe with our interactive map.</li>         
+        <li>Learn about different celestial bodies.</li>
+        <li>Track real-time space missions.</li>
+    </ul>
+    <br>
+    <h2>Upcoming Features:</h2>
+    <ul>
+        <li>Virtual reality space tours.</li>
+        <li>Augmented reality stargazing.</li>
+        <li>Community forums for space enthusiasts.</li>
+    </ul>
+    <br>
+      
+    <h2>
+    Development Roadmap:
+    </h2>
+    <ul>
+        <li>Q1 2024: Launch of the interactive map and celestial body database.</li>
+        <li>Q2 2024: Introduction of real-time space mission tracking.</li>
+        <li>Q3 2024: Development of virtual reality space tours.</li>
+        <li>Q4 2024: Rollout of augmented reality stargazing features.</li>
+        <li>Q1 2025: Launch of community forums and user profiles.</li>
+    </ul>
+    <br>
+ 
+
+    
+    
+    <div class="caption">
+        <h2>Earth from Space</h2>
+        <p>A stunning view of our planet from orbit.</p>
+    </div>
+</div>
+
+<div class="zoom">
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/054/917/286/small_2x/holographic-display-of-earth-rotating-with-real-time-data-in-space-view-technology-and-innovation-in-global-connectivity-earth-surface-from-space-futuristic-visualization-concept-photo.jpeg" alt="Earth" class="zoom">
+</div>
+<br>
+
+
+<div class="slider-container">
+  <div class="slide active">
+    <img src="https://static.scientificamerican.com/dam/m/63580c9277ce5cdb/original/full_moon_rising_over_salish_sea.jpg?m=1729193952.743&w=1200" alt="Image 1">
+  </div>
+  <div class="slide">
+    <img src="https://images.immediate.co.uk/production/volatile/sites/7/2018/02/Earth-from-space-1-64e9a7c.jpg?quality=90&resize=980,654" alt="Image 2">
+  </div>
+  <div class="slide">
+    <img src="https://cdn.eso.org/images/screen/eso1509a.jpg" alt="Image 3">
+  </div>
+</div>
+<br>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+</ul>
+<br>
+   <p class="navigation"><a href="http://127.0.0.1:5500/DEV2.html">next</a>
+    <a href="index.html" style="color: lightblue; float: right;">Go back to Home</a></p>
+    <br>
+
+
+
+
+
+
+
+<h2>Contact Us:</h2>
+<p>If you have any questions or suggestions, feel free to reach out to us at </p>
+<p>
+<br><a href="mailto:">Email Us</a>
+    <br><a href="index.html" style="color: lightblue;">Go back to Home</a>
+
+</p>   
+
+</body>
+</html>
